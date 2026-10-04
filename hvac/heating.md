@@ -10,6 +10,15 @@ What it needs:
 - An exhaust outlet and a combustion air inlet.
 - An enable signal from the ZV (cabin heat requested, or pack cold).
 
+**Fuel use** (manufacturer figures):
+
+| Heater | Full output | Low output | Electrical draw |
+|---|---|---|---|
+| [Webasto Thermo Top Evo 5](https://www.heatso.com/webasto-thermo-top-evo-5-diesel-12v-5-2-kw-water-heater-with-multicontroller/) | 5.0 kW, 0.62 L/h (0.16 gal/h) | 2.5 kW, 0.31 L/h (0.08 gal/h) | 12–33 W plus pump |
+| [Eberspächer Hydronic S3 D5E](https://www.eberspaecher-climate.com/fileadmin/data/csp/pdf/ProductSheets_new_EN/Hydronic_S3_Data_sheet_EN.pdf) | 5.0 kW, 0.59 L/h | 1.3 kW, 0.15 L/h | 32 W running, 135 W at start |
+
+Once the cab is warm the heater spends most of its time at low output, so plan on roughly 0.3 L/h (0.08 gal/h) **[inferred]**. A 1-hour winter drive uses about a third of a liter, and a 5-gallon (19 L) tank lasts about 30 hours at full output and 60+ hours at low output. Making the same 5 kW electrically for an hour takes 5 kWh from the pack, which is roughly 10–12 miles of range in a truck this size **[inferred]**.
+
 The upside is about 5 kW of heat that doesn't come out of the pack. The downside is that it burns fuel and makes exhaust, so it shouldn't run unattended in a closed garage.
 
 ## Warming the battery with it
