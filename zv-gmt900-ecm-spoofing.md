@@ -87,6 +87,10 @@ modelled on the existing Subaru and VAG classes. It passed a syntax check with n
 (commit 5875a5c) in a container that is now gone, and **was never pushed**, so the code itself is lost.
 The chat only described it; the summary below is everything the transcript shows.
 
+**Rewritten 2026-10-04:** a new version of the class, checked against upstream Stm32-vcu, is in the
+ev-notes repo under [`gm-ecm-spoofing/`](https://github.com/nerdoftech/ev-notes/tree/main/gm-ecm-spoofing)
+(copy in project files at `notes/gm-ecm-spoofing/`).
+
 **Registration (three small edits plus the new class):**
 - Vehicle enum: new entry, shown in the ZV's Vehicle parameter as `9=GM_GMT900`.
 - Main loop: selects the class when Vehicle = 9.
