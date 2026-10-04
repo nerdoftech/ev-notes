@@ -3,7 +3,7 @@
 Draft `GM_GMT900` vehicle class for the ZombieVerter firmware
 ([damienmaguire/Stm32-vcu](https://github.com/damienmaguire/Stm32-vcu)). It recreates the periodic
 frames the removed ECM and TCM sent on the truck's high-speed GMLAN bus. Background, frame table
-and open questions are in [../zv-gmt900-ecm-spoofing.md](../zv-gmt900-ecm-spoofing.md).
+and open questions are in [zv-gmt900-ecm-spoofing.md](zv-gmt900-ecm-spoofing.md).
 
 **Status:** written 2026-10-04 against upstream Stm32-vcu commit `b061f84` (Sept 10, 2026).
 It passes a host `g++ -fsyntax-only -Wall -Wextra` check, along with the patched main loop,

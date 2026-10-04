@@ -1,6 +1,6 @@
 # Rear 4-link — mostly street, occasional drag racing
 
-Compiled 2026-10-04. Geometry is target-driven, not from kit drawings. Recheck everything in a 4-link calculator with the final parts, ride height and tires.
+Compiled 2026-10-04. Geometry is target-driven and the brackets are custom fabricated. Recheck everything in a 4-link calculator with the final parts, ride height and tires.
 **[inferred]** marks Claude's estimates.
 
 Assumptions: wheel center 17.75 in, CG height 26 in **[inferred]**, wheelbase 143.6 in.
@@ -15,7 +15,7 @@ Assumptions: wheel center 17.75 in, CG height 26 in **[inferred]**, wheelbase 14
 
 ## Layout
 
-- **Type:** parallel 4-link plus Panhard bar, links outboard of the frame rails (Suspension Engineering 2007–2018 kit brackets as the base). Triangulated uppers won't fit because the LDU sits where they would meet.
+- **Type:** parallel 4-link plus Panhard bar, links outboard of the frame rails (custom-fabricated brackets). Triangulated uppers won't fit because the LDU sits where they would meet.
 - **Lower links:** ~32 in long, near level at ride height. Frame bracket with 3–4 vertical holes about 1 in apart, 15.0 to 18.0 in high.
 - **Upper links:** ~21.6 in long. 9 in vertical separation from the lowers at the beam (more separation means lower link loads).
 - **Panhard bar:** as long as fits (45 in or more), level at ride height. Its height sets the rear roll center; aim for about 12–14 in. A Watts link avoids lateral shift but is harder to package around the LDU; a Panhard bar is fine for ±4 in of travel.

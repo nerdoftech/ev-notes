@@ -5,7 +5,7 @@ Compiled 2026-10-04 from the project's rear-axle notes and the "Suspension" thre
 
 ## The plan in one paragraph
 
-The stock solid rear axle and leaf springs come out. The Tesla LDU (openinverter board) bolts to the frame on the rear axle line, turned 180° so the motor sits behind the axle. A de Dion beam ties the two rear hubs together and is located by a parallel 4-link (Suspension Engineering 2007–2018 Silverado kit as the base) plus a Panhard bar, with QA1 coilovers. Hybrid half-shafts (Tesla inner joint, GMT900 4WD outer joint) drive GMT900 4WD front hubs on the beam ends, which keeps the truck's 6 x 5.5 in wheels and GM brakes. The truck is mostly a street truck with occasional drag racing.
+The stock solid rear axle and leaf springs come out. The Tesla LDU (openinverter board) bolts to the frame on the rear axle line, turned 180° so the motor sits behind the axle. A de Dion beam ties the two rear hubs together and is located by a parallel 4-link (custom-fabricated frame and beam brackets) plus a Panhard bar, with QA1 coilovers. Hybrid half-shafts (Tesla inner joint, GMT900 4WD outer joint) drive GMT900 4WD front hubs on the beam ends, which keeps the truck's 6 x 5.5 in wheels and GM brakes. The truck is mostly a street truck with occasional drag racing.
 
 ![Rear 4-link layout](rear-4link.png)
 
@@ -28,7 +28,7 @@ The stock solid rear axle and leaf springs come out. The Tesla LDU (openinverter
 ## Open items
 
 - Weigh each axle (and ideally measure CG height) on the stock truck before teardown
-- Suspension Engineering kit bracket hole positions (not published; call (559) 348-0200)
+- Design and fabricate the frame brackets (multi-hole lower bracket, upper bracket) and the beam brackets
 - Final ride height and tire size
 - Panhard vs Watts packaging around the LDU and the de Dion tube center section (~130 in)
 - Axle builder to confirm the hybrid half-shaft (common bar diameter, CV torque capacity)
