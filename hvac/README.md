@@ -5,7 +5,7 @@ Compiled 2026-10-04 from the project's "HVAC" thread. Nothing here has been test
 
 ## The plan in one paragraph
 
-A Tesla high-voltage electric compressor replaces the belt-driven unit and feeds the stock GMT900 condenser and evaporator (both R134a). A diesel coolant heater plugs into the stock heater core hoses, so the factory blend doors, vents and defrost stay as they are. The same heater can warm the battery through a brazed plate heat exchanger, which keeps the hot heater coolant out of the modules. Battery cooling starts simple: the battery gets its own small radiator and pump, with a bypass for winter. Capped tees in the line leave room for a Tesla chiller on the A/C circuit later. The LDU and OI board stay on their own loop and the stock radiator. The ZombieVerter switches the pumps, heater, chiller solenoid and compressor.
+A Tesla high-voltage electric compressor replaces the belt-driven unit and feeds the stock GMT900 condenser and evaporator (both R134a). A diesel coolant heater plugs into the stock heater core hoses, so the factory blend doors, vents and defrost stay as they are. The same heater can warm the battery through a brazed plate heat exchanger, which keeps the hot heater coolant out of the modules. The battery loop runs through a chiller on the A/C circuit by default. A Chevy Volt 3-way valve switches it to the plate heat exchanger (and optional electric heater) when the pack needs heat. The LDU and OI board stay on their own loop and the stock radiator. The ZombieVerter switches the pumps, heater, chiller solenoid and compressor.
 
 ![Coolant and refrigerant loops](coolant-loops.png)
 
@@ -16,15 +16,17 @@ A Tesla high-voltage electric compressor replaces the belt-driven unit and feeds
 | [ac-compressor.md](ac-compressor.md) | Tesla compressor variants and part numbers, Gen 2 pinout and CAN protocol (0x28A / 0x223 / 0x233) |
 | [heating.md](heating.md) | Diesel coolant heater for the cab and battery, plate heat exchanger sizing and where to buy |
 | [battery-cooling.md](battery-cooling.md) | Radiator-only cooling vs adding a chiller, chiller part numbers, sharing the compressor with the cab |
-| coolant-loops.png / coolant-loops.svg | Concept diagram of all four loops (the full version with the chiller) |
+| coolant-loops.png / coolant-loops.svg | Concept diagram of all four loops, with pumps P1–P3 and valve V1 |
 
-## Coolant pumps (decided 2026-10-05, new parts only)
+## Coolant pumps and battery valve (decided 2026-10-05)
 
 | Loop | Pump | Why |
 |---|---|---|
 | Heater (P1) | Bosch PAD 0392022010 (Mercedes 0005000386) | Built as a parking-heater pump. On/off, runs straight from the heater's pump output. ~1400 l/h at 0.3 bar, 58 W. ~$135–180 new |
 | Battery (P2) | Pierburg CWA50 | PWM speed control from the ZV, so it can run slowly to hold temperature. ~25 L/min at 0.53 bar, 79 W. ~$110–150 new |
 | LDU + inverter (P3) | Pierburg CWA50 | Holds flow through the restrictive loop. Runs at full speed if the PWM signal is lost. One spare covers both loops |
+
+**Battery loop valve (V1): Chevy Volt 3-way coolant valve, GM 22987494** (older numbers 22830923 and 22762617), about $60 new from GM parts sites, with aftermarket versions on Amazon. It's a reversible DC motor: 12 V on pin 1 with pin 2 grounded drives it to one port, and reversed polarity drives it to the other. Pins 4–6 are a position sensor (pin 6 is the 5 V reference, pin 5 ground, pin 4 the signal). Drive it with two relays or an H-bridge wired so the **unpowered state selects the chiller**. The ZV cuts motor power once the sensor shows end of travel. Pinout source: [DIY Electric Car Volt valve thread](https://www.diyelectriccar.com/threads/chevy-volt-opel-ampera-3-way-valve.199131/).
 
 **CWA50 PWM** (50–1000 Hz, best under 250 Hz). The ZV must stay out of the 1–12 % bands.
 
