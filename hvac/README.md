@@ -5,7 +5,7 @@ Compiled 2026-10-04 from the project's "HVAC" thread. Nothing here has been test
 
 ## The plan in one paragraph
 
-A Tesla high-voltage electric compressor replaces the belt-driven unit and feeds the stock GMT900 condenser and evaporator (both R134a). A diesel coolant heater plugs into the stock heater core hoses, so the factory blend doors, vents and defrost stay as they are. The same heater can warm the battery through a brazed plate heat exchanger, which keeps the hot heater coolant out of the modules. The battery loop runs through a chiller on the A/C circuit by default. A Chevy Volt 3-way valve switches it to the plate heat exchanger (and optional electric heater) when the pack needs heat. The LDU and OI board stay on their own loop and the stock radiator. The ZombieVerter switches the pumps, heater, chiller solenoid and compressor.
+A Tesla high-voltage electric compressor replaces the belt-driven unit and feeds the stock GMT900 condenser and evaporator (both R134a). A diesel coolant heater plugs into the stock heater core hoses, so the factory blend doors, vents and defrost stay as they are. The same heater can warm the battery through a brazed plate heat exchanger, which keeps the hot heater coolant out of the modules. The battery loop runs through a chiller on the A/C circuit by default. A Chevy Volt 3-way valve switches it to the plate heat exchanger when the pack needs heat. The LDU and OI board stay on their own loop and the stock radiator. The ZombieVerter switches the pumps, heater, chiller solenoid and compressor.
 
 ![Coolant and refrigerant loops](coolant-loops.png)
 
