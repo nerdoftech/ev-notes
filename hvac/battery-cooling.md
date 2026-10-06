@@ -11,7 +11,7 @@ Plenty of conversions cool the pack with just a radiator.
 - Leave a pair of capped tees in the line, so a chiller can drop in later.
 - Run the packs in parallel, not in series. Series is simpler to plumb, but the rear pack would always run warmer.
 
-The limit is that a radiator can only bring the pack down to a bit above outside air temperature. On a 100 °F day the pack sits around 105–115 °F **[inferred]**, close to the 45 °C (113 °F) where you want the cells to stop climbing. At street loads, 14 modules make only a few hundred watts of heat **[inferred]**. The pack gets hot from sustained hard use: back-to-back drag passes, towing up grades, or summer DC fast charging. Whether radiator-only is enough depends on summer climate and fast charging plans.
+The limit is that a radiator can only bring the pack down to a bit above outside air temperature. On a 100 °F day the pack sits around 105–115 °F **[inferred]**, close to the 45 °C (113 °F) where you want the cells to stop climbing. At street loads, 16 modules make only a few hundred watts of heat **[inferred]**. The pack gets hot from sustained hard use: back-to-back drag passes, towing up grades, or summer DC fast charging. Whether radiator-only is enough depends on summer climate and fast charging plans.
 
 ## Adding a chiller later
 

@@ -16,7 +16,7 @@ The stock solid rear axle and leaf springs come out. The Tesla LDU (openinverter
 | [de-dion-and-ldu.md](de-dion-and-ldu.md) | Stock axle facts, de Dion layout, LDU placement, running the LDU reversed, fabrication materials |
 | [four-link.md](four-link.md) | 4-link geometry, street and drag bracket settings, neutral line, Panhard, sway bar, coilovers |
 | [half-shafts-and-abs.md](half-shafts-and-abs.md) | Half-shaft splines, hybrid shaft plan, ABS tone rings and sensors |
-| [weight-and-cg.md](weight-and-cg.md) | Weight distribution with the 6 + 8 module pack, CG height and how to measure it |
+| [weight-and-cg.md](weight-and-cg.md) | Weight distribution with the 6 + 10 module pack, CG height and how to measure it |
 | rear-4link.png / rear-4link.svg | To-scale side and top view of the layout |
 
 ## Coordinates used throughout

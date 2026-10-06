@@ -4,9 +4,11 @@ Compiled 2026-10-04. All weights are estimates **[inferred]**; weighing the truc
 
 ## Battery layout
 
-14 Tesla Model S modules (~55 lb each), about 920 lb with enclosures and BMS:
+16 Tesla Model S modules (~55 lb each), 96s like a stock Tesla pack (~403 V full, ~355 V nominal, ~85 kWh), about 1,050 lb with enclosures and BMS:
 - 6 modules where the engine was, 3 rows two high, centered ~5 in behind the front axle
-- 8 modules between the frame rails, two layers of 4, each module turned across the truck, in a box ~50 in long
+- 10 modules between the frame rails, two layers of 5, each module turned across the truck, in a box ~62 in long (~670 lb with its share of enclosure and BMS)
+
+Changed from 14 modules (6 + 8) on 2026-10-06 to get the full 96s pack voltage the LDU and 400 V accessories are built for.
 
 The 4-link links run outboard of the rails, so neither box interferes with them.
 
@@ -14,14 +16,16 @@ The 4-link links run outboard of the rails, so neither box interferes with them.
 
 Baseline: 2012 Silverado 1500 2WD crew cab, ~5,200 lb, ~57/43, with the engine, transmission, fuel tank and exhaust removed and the LDU and accessories added.
 
-| 8-module box position | Front axle | Rear axle | Split |
+| 10-module box position | Front axle | Rear axle | Split |
 |---|---|---|---|
 | Stock | 2,964 lb | 2,236 lb | 57/43 |
-| Forward, right behind the front crossmember (center ~47 in) | 3,020 lb (+56) | 2,505 lb (+269) | 55/45 |
-| Back, ending near ~103 in (center ~79 in) | 2,901 lb (−63) | 2,624 lb (+388) | 52.5/47.5 |
+| Forward, right behind the front crossmember (center ~53 in) | 3,082 lb (+118) | 2,577 lb (+341) | 54.5/45.5 |
+| Back, ending near ~103 in (center ~72 in) | 2,994 lb (+30) | 2,665 lb (+429) | 53/47 |
 
-- **Front:** within about 60 lb of stock either way, so the stock front springs and ride height can likely stay.
-- **Rear:** 270–390 lb heavier before cargo. The coilover spring rates are picked for this.
+Positions are inches behind the front axle (143.6 in wheelbase). Total ~5,660 lb, about 135 lb more than the 14-module layout.
+
+- **Front:** 30–120 lb over stock. The back position keeps the stock front springs and ride height; the forward position may sit slightly low.
+- **Rear:** 340–430 lb heavier before cargo. The coilover spring rates are picked for this.
 - Removing the solid axle for the de Dion saves roughly 100 lb net at the rear, moving the split about one more point forward.
 - The engine-bay modules sit higher than a frame-rail pack, so the CG rises slightly compared with putting everything between the rails.
 

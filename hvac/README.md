@@ -43,7 +43,7 @@ There's no feedback over PWM (diagnostics are on LIN, which the ZV doesn't speak
 
 ## Open items
 
-- Minimum HV voltage for the compressor. The 14-module pack is about 280 V empty, 320 V nominal and 353 V full, and the compressors were tested at 340–368 V.
+- Minimum HV voltage for the compressor. The 16-module pack is about 320 V empty, 355 V nominal and 403 V full, and the compressors were tested at 340–368 V, so only the bottom of the charge range is untested.
 - Compressor CAN bitrate (probably 500 kbps), and which ZV CAN bus it goes on. The plan is the bus shared with the LDU board, not GMLAN.
 - Reading the A/C request from the factory HVAC head unit over low-speed GMLAN. This extends [gm-ecm-spoofing](../gm-ecm-spoofing/).
 - Decide whether a radiator alone is enough to cool the battery. That depends on summer climate and whether the truck will DC fast charge.
