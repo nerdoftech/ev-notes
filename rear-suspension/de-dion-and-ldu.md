@@ -31,6 +31,8 @@ From the LDU scan (05_18_17_Tesla_Motor_1.stl) placed in the truck model.
 
 ## Running the LDU reversed (required by the 180° orientation)
 
+Full notes, including gear, bearing and seal concerns: [../drive-unit/tesla-ldu-reversed.md](../drive-unit/tesla-ldu-reversed.md).
+
 - **Motor direction:** set `dirmode` on the openinverter LDU board to SwitchReversed (3) or ButtonReversed (2). In stm32-sine `VehicleControl::SelectDirection()`, the Reversed flag multiplies the forward/reverse inputs by -1. The ZombieVerter sends forward/reverse as CAN bits (Can_OI.cpp: forward = bit 8, reverse = bit 16), so ZV forward makes the motor spin reversed.
 - Keep ZV `dirmode` normal so ZV `dir` (and the GMT900 PRNDL frame 0x1F5 and reverse lamps) still means truck direction. Do **not** reverse on the ZV side: its Reversed flag only applies to din_forward/din_reverse and would flip `dir`.
 - **Verify on the bench at low torque before driving.**
