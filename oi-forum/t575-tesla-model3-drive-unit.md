@@ -136,4 +136,42 @@ Names used below:
     - Damien hand-fitted both resistors to the first V3.2 batch (Feb 2026) and said he would add them to the next board revision.
 - JLCPCB placed the STM32 rotated on 2 of 10 boards. Power up and program each board before snapping off the panel rails that carry its ID.
 
+## Development timeline
+
+Key milestones from the thread, oldest first. Each date is the forum post date, and the link goes to the post. Jack Bauer is Damien, davefiddes is Dave.
+
+| Date | Milestone | Post |
+|---|---|---|
+| 2020-02-28 | Damien starts the thread to hack the Model 3 rear drive unit (RDU) inverter. | [p7202](https://openinverter.org/forum/viewtopic.php?p=7202#p7202) |
+| 2020-03-13 | First bench power-up of the stock RDU inverter. Holding the Tesla TI processor in reset leaves the rest of the board running. | [p7771](https://openinverter.org/forum/viewtopic.php?p=7771#p7771) |
+| 2020-03-30 | First motor spin driven by the RDU inverter's own power stage. | [p8501](https://openinverter.org/forum/viewtopic.php?p=8501#p8501) |
+| 2020-05-14 | V1 "modboard" (an STM32 board wired into the Tesla board) arrives from JLCPCB and powers up. | [p10915](https://openinverter.org/forum/viewtopic.php?p=10915#p10915) |
+| 2020-07-21 | johu's custom firmware detects the modboard and enables the gate drivers. | [p14332](https://openinverter.org/forum/viewtopic.php?p=14332#p14332) |
+| 2020-09-30 | Full closed-loop FOC control of the RDU with the V2 modboard. | [p17262](https://openinverter.org/forum/viewtopic.php?p=17262#p17262) |
+| 2020-10-02 | Damien releases all the design sources as open source. | [p17374](https://openinverter.org/forum/viewtopic.php?p=17374#p17374) |
+| 2021-02 | Damien's STM32 adapter board, which replaces the removed TI chip, arrives from PCBWay. davefiddes starts STGAP1AS gate driver and TLF35584 PSU drivers from Colin's SPI decoding. | [p23647](https://openinverter.org/forum/viewtopic.php?p=23647#p23647), [p24077](https://openinverter.org/forum/viewtopic.php?p=24077#p24077) |
+| 2021-10 | Change of direction: erase the Tesla TI chip over JTAG and port OI to it ("c2000-inverter"). Damien's JTAG adapter goes on sale on 2021-10-22. | [p32322](https://openinverter.org/forum/viewtopic.php?p=32322#p32322), [p33116](https://openinverter.org/forum/viewtopic.php?p=33116#p33116) |
+| 2022-02-22 | fbo turns the motor open loop at 12 V from the Tesla TI chip running ported code. | [p37127](https://openinverter.org/forum/viewtopic.php?p=37127#p37127) |
+| 2023-02-09 | davefiddes warns that the c2000 port can brick a drive unit with no recovery. The port stalls. | [p52694](https://openinverter.org/forum/viewtopic.php?p=52694#p52694) |
+| 2024-12-13 | Restart: Artur Kustusch reverse-engineers the whole gate driver section, and Damien starts a full replacement board. | [p77623](https://openinverter.org/forum/viewtopic.php?p=77623#p77623) |
+| 2025-01-09 | V1 of the full replacement board (STM32F103, standard OI firmware) is laid out. | [p78526](https://openinverter.org/forum/viewtopic.php?p=78526#p78526) |
+| 2025-05-28 | V1 board runs a Model 3 motor through the Tesla inverter. | [p83042](https://openinverter.org/forum/viewtopic.php?p=83042#p83042) |
+| 2025-07-02 | Damien's Volvo V50 test car ("T3RD") is ready for in-car testing. | [p83995](https://openinverter.org/forum/viewtopic.php?p=83995#p83995) |
+| 2025-08-20 | Oil pump speed control over LIN works. | [p85367](https://openinverter.org/forum/viewtopic.php?p=85367#p85367) |
+| 2025-09-26 | The RDU runs at full HV (330 V) after gate-drive fixes, followed by regen tests. | [p86380](https://openinverter.org/forum/viewtopic.php?p=86380#p86380) |
+| 2025-10-02 | Front drive unit (induction motor) runs on the sine firmware. | [p86510](https://openinverter.org/forum/viewtopic.php?p=86510#p86510) |
+| 2025-10-24 | V3 beta boards go on sale (5 units), and davefiddes releases the first M3_DU firmware, v5.39.0, the next day. | [p87072](https://openinverter.org/forum/viewtopic.php?p=87072#p87072), [p87118](https://openinverter.org/forum/viewtopic.php?p=87118#p87118) |
+| 2025-11-01 | Beta testing finds that the board turns on but won't turn off from the T15 ignition input, which leads to the MAIN_PSU_EN pull-down fix. | [p87303](https://openinverter.org/forum/viewtopic.php?p=87303#p87303) |
+| 2025-11-11 | The Volvo V50 moves under its own power on the OI board for the first time. | [p87575](https://openinverter.org/forum/viewtopic.php?p=87575#p87575) |
+| 2025-11-26 | First Model Y motor runs on OI (a beta tester's), and the `syncofs` 2200 → 34968 correction follows. | [p87988](https://openinverter.org/forum/viewtopic.php?p=87988#p87988) |
+| 2026-02-01 | First order of ten V3.2 boards. They arrive and work on 2026-02-25, with the two 10K resistor fixes fitted by hand. | [p89435](https://openinverter.org/forum/viewtopic.php?p=89435#p89435), [p90032](https://openinverter.org/forum/viewtopic.php?p=90032#p90032) |
+| 2026-02-27 | V3.2 boards and the full design files go on sale on the EVBMW webshop, still labelled beta. | [p90087](https://openinverter.org/forum/viewtopic.php?p=90087#p90087) |
+| 2026-03-11 | Front drive unit variant support: the board detects RDU vs FDU from resistor R45 (3K3 vs 5K6). | [p90387](https://openinverter.org/forum/viewtopic.php?p=90387#p90387) |
+| 2026-03-18 | First customer V3.2 boards ship with the current sensors fitted. | [p90566](https://openinverter.org/forum/viewtopic.php?p=90566#p90566) |
+| 2026-03-20 | Firmware M3_DU_v5.40.0 released. It's the version shipping on V3.2 boards. | [p90600](https://openinverter.org/forum/viewtopic.php?p=90600#p90600) |
+| 2026-04-19 | A fork that runs the Tesla TI chip directly appears, and Damien says he'll fill current orders and stop development. He keeps shipping batches anyway (2026-05-12). | [p91285](https://openinverter.org/forum/viewtopic.php?p=91285#p91285), [p91947](https://openinverter.org/forum/viewtopic.php?p=91947#p91947) |
+| 2026-05-24 | Damien announces a "universal" M3 inverter project for running other motors. | [p92189](https://openinverter.org/forum/viewtopic.php?p=92189#p92189) |
+| 2026-08-26 | Damien posts firmware raising `throtcur` max from 10 to 20 (2000 A at full throttle) for testers. | [p94042](https://openinverter.org/forum/viewtopic.php?p=94042#p94042) |
+| 2026-09-25 | nathaniel reaches 180 km/h, well into field weakening, and finds a regen wind-up issue at high speed. | [p94537](https://openinverter.org/forum/viewtopic.php?p=94537#p94537) |
+
 _Corrected 2026-10-07 after Jack Bauer's review of this summary (openinverter.org/forum/viewtopic.php?p=94797): current sensor substitution and the V3.2 resistor fixes._
