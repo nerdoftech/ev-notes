@@ -57,7 +57,7 @@ Names used below:
   - Heat the current sensors before prying up the block, or their heads snap off. The glue is heat sensitive.
 - **Conformal coating:** MG Chemicals 8310A stripper softens it. Acetone does nothing.
 - **Parts:**
-  - Current sensors: Melexis MLX91209LVA-CAA-002-SP (7.3 mV/mT, Mouser). Other variants work if you recalibrate.
+  - Current sensors: Melexis MLX91209LVA-CAA-002-SP (7.3 mV/mT, Mouser). Use this exact part. Damien warns that a less sensitive variant can push high-current readings into ferrite-ring saturation, which makes them inaccurate even after recalibration.
   - Heatsink thermistors: EPCOS B57164K0473J000 (47k). V3.3 will use 0402 Panasonic ERT-J0ET473J on small PCBs from jrbe.
   - Gate drivers: STGAP1AS (OEM) or STGAP1BS (new) both work.
 - **Connectors:**
@@ -130,5 +130,10 @@ Names used below:
 - V3.3 changes:
   - better hole alignment (H10 was off on V3.2);
   - OEM-style temperature sensor PCBs;
-  - the MAIN_PSU_EN pull-down and GATE_DIAG pull-up fixes. davefiddes found that V3.2 power-on failed to turn off without them.
+  - the two 10K resistor fixes added to the schematic. davefiddes found in Feb 2026 that the V3.2 design was missing them (p89663):
+    - a pull-down from MAIN_PSU_EN (base of Q16) to ground. Without it the board powers on but never powers off if the MCU fails to initialise or boot loops;
+    - a pull-up from GATE_DIAG to 3.3 V. Without it the fault LED glows and the inverter risks tripping.
+    - Damien hand-fitted both resistors to the first V3.2 batch (Feb 2026) and said he would add them to the next board revision.
 - JLCPCB placed the STM32 rotated on 2 of 10 boards. Power up and program each board before snapping off the panel rails that carry its ID.
+
+_Corrected 2026-10-07 after Jack Bauer's review of this summary (openinverter.org/forum/viewtopic.php?p=94797): current sensor substitution and the V3.2 resistor fixes._
